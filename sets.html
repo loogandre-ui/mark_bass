@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <style>
+    html, body {
+      background: #0b0f1a;
+      color: #ffffff;
+    }
+  </style>
+    <title>Setid | Mark Bass</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+   <body>
+    <div class="min-h-screen bg-surface text-white">
+      <header class="sticky top-0 z-50 border-b border-line bg-surface/80 backdrop-blur-md">
+        <div class="container-main flex items-center justify-between px-6 py-4">
+          <a href="/" class="font-heading text-2xl font-black uppercase tracking-wider text-white">
+            Mark <span class="text-primary">Bass</span>
+          </a>
+
+          <nav class="hidden items-center gap-8 md:flex" aria-label="Menüü">
+            <a href="/" class="text-sm uppercase tracking-[0.2em] text-white">Avaleht</a>
+            <a href="/sets.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Setid</a>
+            <a href="/about.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Meist</a>
+            <a href="/contact.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Kontakt</a>
+          </nav>
+
+          <a href="/sets.html" class="btn-primary hidden md:inline-flex">
+            Vaata sette
+          </a>
+
+          <button
+            id="menu-toggle"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-panel text-white md:hidden"
+            aria-label="Ava menüü"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            type="button"
+          >
+            <span class="sr-only">Ava menüü</span>
+
+            <svg
+              id="menu-icon-open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <svg
+              id="menu-icon-close"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hidden h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+                   <button
+  id="theme-toggle"
+  class="ml-2 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-panel text-white transition hover:bg-white/10"
+  aria-label="Muuda teemat"
+  type="button"
+>
+  <!-- Dark -->
+  <svg
+    id="theme-icon-dark"
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+  </svg>
+
+  <!-- Light -->
+  <svg
+    id="theme-icon-light"
+    xmlns="http://www.w3.org/2000/svg"
+    class="hidden h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2" />
+    <path d="M12 20v2" />
+    <path d="m4.93 4.93 1.41 1.41" />
+    <path d="m17.66 17.66 1.41 1.41" />
+    <path d="M2 12h2" />
+    <path d="M20 12h2" />
+    <path d="m6.34 17.66-1.41 1.41" />
+    <path d="m19.07 4.93-1.41 1.41" />
+  </svg>
+</button>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="hidden border-t border-line bg-surface/95 px-6 py-4 md:hidden"
+        >
+          <nav class="flex flex-col gap-4">
+            <a href="/" class="text-sm uppercase tracking-[0.2em] text-white">Avaleht</a>
+            <a href="/sets.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Setid</a>
+            <a href="/contact.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Kontakt</a>
+            <a href="/about.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Meist</a>
+            <a href="/sets.html" class="btn-primary mt-2 w-full">Vaata sette</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="section-padding text-center">
+        <h1 class="font-heading text-5xl font-black uppercase">
+          Viimased <span class="text-primary">setid</span>
+        </h1>
+        <p class="mt-4 text-muted max-w-xl mx-auto">
+          Läbimõeldud show mis on energiaga laetud.
+        </p>
+      </section>
+
+      <!-- SET GRID -->
+      <section class="section-padding pt-0">
+        <div class="container-main grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+          <!-- CARD -->
+<div class="card-surface p-6">
+  <div class="mb-4 overflow-hidden rounded-xl">
+    <img
+      src="/images/neonRitual.jpg"
+      alt="Mark Bassi sett Neon Ritual"
+      class="h-48 w-full object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
+
+  <h3 class="font-heading text-2xl font-black uppercase">Neon Ritual</h3>
+
+  <p class="mt-2 text-sm text-muted">
+    Tume progressiivne voog kineetilise energia ja atmosfäärilise pingega.
+  </p>
+
+  <div class="mt-4 flex flex-wrap gap-2">
+    <span class="rounded border border-line px-2 py-1 text-xs text-muted">Progressive</span>
+    <span class="rounded border border-line px-2 py-1 text-xs text-muted">Bass</span>
+    <span class="rounded border border-line px-2 py-1 text-xs text-muted">Atmosfääriline</span>
+  </div>
+
+  <div class="mt-6 rounded-2xl border border-line bg-panel p-4">
+    <div class="flex items-center gap-4">
+      <button
+        class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-white transition duration-300 hover:scale-105"
+        type="button"
+        aria-label="Esita sett"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5.14v13.72c0 .72.78 1.17 1.4.81l10.2-5.86a.94.94 0 0 0 0-1.62L9.4 4.33A.94.94 0 0 0 8 5.14Z" />
+        </svg>
+      </button>
+
+      <div class="min-w-0 flex-1">
+        <p class="truncate text-xs uppercase tracking-[0.25em] text-muted">
+          Mark Bass
+        </p>
+        <h4 class="truncate font-heading text-lg font-black uppercase text-white">
+          Neon Ritual
+        </h4>
+        <p class="text-sm text-muted">
+          Progressive / Dark / Atmospheric
+        </p>
+      </div>
+
+      <div class="text-right">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted">Kestus</p>
+        <p class="text-sm font-black text-white">58:42</p>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <div class="mb-2 flex items-center justify-between text-xs text-muted">
+        <span>01:24</span>
+        <span>58:42</span>
+      </div>
+
+      <div class="h-2 rounded-full bg-white/10">
+        <div class="h-2 w-[18%] rounded-full bg-primary"></div>
+      </div>
+    </div>
+
+    <div class="mt-5 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 text-muted">
+        <button class="transition hover:text-white" type="button" aria-label="Eelmine">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M11.03 12 18 17.01V6.99L11.03 12Zm-8 0L10 17.01V6.99L3.03 12Z" />
+          </svg>
+        </button>
+
+        <button class="transition hover:text-white" type="button" aria-label="Järgmine">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.97 12 6 6.99v10.02L12.97 12Zm8 0L14 6.99v10.02L20.97 12Z" />
+          </svg>
+        </button>
+
+        <button class="transition hover:text-white" type="button" aria-label="Juhuesitus">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17 3h4v4h-2V6.41l-4.29 4.3-1.42-1.42L17.59 5H17V3ZM3 7h4.59l10 10H21v2h-4.59l-10-10H3V7Zm10.29 5.29 1.42 1.42L13.41 15H17v2h-4v-4.59l.29-.12ZM19 19v-1.41l-2.29-2.3 1.42-1.41L21 16.76V19h-2ZM3 17h4v2H3v-2Z" />
+          </svg>
+        </button>
+      </div>
+
+      <button class="text-sm font-medium text-accent transition hover:text-white" type="button">
+        Ava tracklist
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="card-surface p-6">
+  <div class="mb-4 overflow-hidden rounded-xl">
+    <img
+      src="/images/afterlightPulse.jpg"
+      alt="Afterlight Pulse DJ sett"
+      class="h-48 w-full object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
+
+  <h3 class="font-heading text-2xl font-black uppercase">Afterlight Pulse</h3>
+
+  <p class="mt-2 text-sm text-muted">
+    Puhas klubigroove, täpsed üleminekud ja energiline ülesehitus.
+  </p>
+
+  <div class="mt-4 flex flex-wrap gap-2">
+    <span class="rounded border border-line px-2 py-1 text-xs text-muted">Club</span>
+    <span class="rounded border border-line px-2 py-1 text-xs text-muted">Groove</span>
+    <span class="rounded border border-line px-2 py-1 text-xs text-muted">Energia</span>
+  </div>
+
+  <div class="mt-6 rounded-2xl border border-line bg-panel p-4">
+    <div class="flex items-center gap-4">
+      <button class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-white transition duration-300 hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5.14v13.72c0 .72.78 1.17 1.4.81l10.2-5.86a.94.94 0 0 0 0-1.62L9.4 4.33A.94.94 0 0 0 8 5.14Z" />
+        </svg>
+      </button>
+
+      <div class="min-w-0 flex-1">
+        <p class="truncate text-xs uppercase tracking-[0.25em] text-muted">
+          Mark Bass
+        </p>
+        <h4 class="truncate font-heading text-lg font-black uppercase text-white">
+          Afterlight Pulse
+        </h4>
+        <p class="text-sm text-muted">
+          Club / Groove / Energy
+        </p>
+      </div>
+
+      <div class="text-right">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted">Kestus</p>
+        <p class="text-sm font-black text-white">42:15</p>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <div class="mb-2 flex justify-between text-xs text-muted">
+        <span>00:52</span>
+        <span>42:15</span>
+      </div>
+
+      <div class="h-2 rounded-full bg-white/10">
+        <div class="h-2 w-[10%] rounded-full bg-primary"></div>
+      </div>
+    </div>
+
+    <div class="mt-5 flex justify-between">
+      <button class="text-sm text-muted hover:text-white">Eelmine</button>
+      <button class="text-sm text-accent hover:text-white">Tracklist</button>
+    </div>
+  </div>
+</div>
+
+          <!-- CARD -->
+<div class="card-surface p-6">
+  <div class="mb-4 overflow-hidden rounded-xl">
+    <img
+      src="/images/midnightSequence.jpg"
+      alt="Midnight Sequence DJ sett"
+      class="h-48 w-full object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
+
+  <h3 class="font-heading text-2xl font-black uppercase">Midnight Sequence</h3>
+
+  <p class="mt-2 text-sm text-muted">
+    Atmosfääriline ja kineetiline pikk sett, mis keskendub emotsioonile ja ruumile.
+  </p>
+
+  <div class="mt-4 flex flex-wrap gap-2">
+    <span class="rounded border border-line px-2 py-1 text-xs text-muted">Atmosfäär</span>
+    <span class="rounded border border-line px-2 py-1 text-xs text-muted">Cinematic</span>
+    <span class="rounded border border-line px-2 py-1 text-xs text-muted">Deep</span>
+  </div>
+
+  <div class="mt-6 rounded-2xl border border-line bg-panel p-4">
+    <div class="flex items-center gap-4">
+      <button class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-white transition duration-300 hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-6 w-6" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5.14v13.72c0 .72.78 1.17 1.4.81l10.2-5.86a.94.94 0 0 0 0-1.62L9.4 4.33A.94.94 0 0 0 8 5.14Z" />
+        </svg>
+      </button>
+
+      <div class="min-w-0 flex-1">
+        <p class="truncate text-xs uppercase tracking-[0.25em] text-muted">
+          Mark Bass
+        </p>
+        <h4 class="truncate font-heading text-lg font-black uppercase text-white">
+          Midnight Sequence
+        </h4>
+        <p class="text-sm text-muted">
+          Atmospheric / Cinematic / Deep
+        </p>
+      </div>
+
+      <div class="text-right">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted">Kestus</p>
+        <p class="text-sm font-black text-white">65:30</p>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <div class="mb-2 flex justify-between text-xs text-muted">
+        <span>03:12</span>
+        <span>65:30</span>
+      </div>
+
+      <div class="h-2 rounded-full bg-white/10">
+        <div class="h-2 w-[25%] rounded-full bg-primary"></div>
+      </div>
+    </div>
+
+    <div class="mt-5 flex justify-between">
+      <button class="text-sm text-muted hover:text-white">Eelmine</button>
+      <button class="text-sm text-accent hover:text-white">Tracklist</button>
+    </div>
+  </div>
+</div>
+    </div>
+    <footer>
+        <div class="container-main py-6 text-center">
+          <p class="text-sm text-muted">© 2026 Mark Bass. Kõik õigused kaitstud.</p>
+        </div>
+      </footer>
+  </body>
+</html>

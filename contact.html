@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <style>
+    html, body {
+      background: #0b0f1a;
+      color: #ffffff;
+    }
+  </style>
+    <title>Kontakt | Mark Bass</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+ <body>
+    <div class="min-h-screen bg-surface text-white">
+      <header class="sticky top-0 z-50 border-b border-line bg-surface/80 backdrop-blur-md">
+        <div class="container-main flex items-center justify-between px-6 py-4">
+          <a href="/" class="font-heading text-2xl font-black uppercase tracking-wider text-white">
+            Mark <span class="text-primary">Bass</span>
+          </a>
+
+          <nav class="hidden items-center gap-8 md:flex" aria-label="Menüü">
+            <a href="/" class="text-sm uppercase tracking-[0.2em] text-white">Avaleht</a>
+            <a href="/sets.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Setid</a>
+            <a href="/about.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Meist</a>
+            <a href="/contact.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Kontakt</a>
+          </nav>
+
+          <a href="/sets.html" class="btn-primary hidden md:inline-flex">
+            Vaata sette
+          </a>
+
+          <button
+            id="menu-toggle"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-panel text-white md:hidden"
+            aria-label="Ava menüü"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            type="button"
+          >
+            <span class="sr-only">Ava menüü</span>
+
+            <svg
+              id="menu-icon-open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <svg
+              id="menu-icon-close"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hidden h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+                   <button
+  id="theme-toggle"
+  class="ml-2 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-panel text-white transition hover:bg-white/10"
+  aria-label="Muuda teemat"
+  type="button"
+>
+  <!-- Dark -->
+  <svg
+    id="theme-icon-dark"
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+  </svg>
+
+  <!-- Light -->
+  <svg
+    id="theme-icon-light"
+    xmlns="http://www.w3.org/2000/svg"
+    class="hidden h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2" />
+    <path d="M12 20v2" />
+    <path d="m4.93 4.93 1.41 1.41" />
+    <path d="m17.66 17.66 1.41 1.41" />
+    <path d="M2 12h2" />
+    <path d="M20 12h2" />
+    <path d="m6.34 17.66-1.41 1.41" />
+    <path d="m19.07 4.93-1.41 1.41" />
+  </svg>
+</button>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="hidden border-t border-line bg-surface/95 px-6 py-4 md:hidden"
+        >
+          <nav class="flex flex-col gap-4">
+            <a href="/" class="text-sm uppercase tracking-[0.2em] text-white">Avaleht</a>
+            <a href="/sets.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Setid</a>
+            <a href="/contact.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Kontakt</a>
+            <a href="/about.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Meist</a>
+            <a href="/sets.html" class="btn-primary mt-2 w-full">Vaata sette</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="section-padding text-center">
+        <h1 class="font-heading text-5xl font-black uppercase">
+          Kontakteeru <span class="text-primary">Minuga</span>
+        </h1>
+        <p class="mt-4 text-muted max-w-xl mx-auto">
+          Broneeringud, koostööprojektid või "custom" DJ-setid.
+        </p>
+      </section>
+
+      <!-- CONTACT FORM -->
+      <section class="section-padding pt-0">
+  <div class="container-main">
+    <div class="mx-auto w-full max-w-2xl">
+      <div class="card-surface contact-card p-6 md:p-8">
+        <div class="mb-8 text-center">
+          <p class="text-sm uppercase tracking-[0.3em] text-muted">Võta ühendust</p>
+          <h2 class="mt-3 font-heading text-4xl font-black uppercase">
+            Kirjuta mulle
+          </h2>
+          <p class="mt-3 text-sm leading-6 text-muted md:text-base">
+            Küsimused, koostöösoovid, esinemispäringud või muud muusikaga seotud mõtted on oodatud.
+          </p>
+        </div>
+
+        <form id="contact-form" class="space-y-6" novalidate>
+          <div>
+            <label for="name" class="text-sm font-medium text-muted">Nimi</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              class="input-field"
+              placeholder="Sisesta oma nimi"
+              aria-describedby="name-error"
+              aria-invalid="false"
+              required
+            />
+            <p id="name-error" class="error-message hidden" aria-live="polite">
+              Palun sisesta nimi.
+            </p>
+          </div>
+
+          <div>
+            <label for="email" class="text-sm font-medium text-muted">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="input-field"
+              placeholder="nimi@domeen.ee"
+              aria-describedby="email-error"
+              aria-invalid="false"
+              required
+            />
+            <p id="email-error" class="error-message hidden" aria-live="polite">
+              Palun sisesta korrektne e-maili aadress.
+            </p>
+          </div>
+
+          <div>
+            <label for="message" class="text-sm font-medium text-muted">Sõnum</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              class="input-field resize-none"
+              placeholder="Kirjuta oma sõnum siia"
+              aria-describedby="message-error"
+              aria-invalid="false"
+              required
+            ></textarea>
+            <p id="message-error" class="error-message hidden" aria-live="polite">
+              Palun sisesta sõnum.
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="btn-primary w-full md:w-auto">
+              Saada sõnum
+            </button>
+          </div>
+
+          <p
+            id="form-success"
+            class="hidden rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-400"
+            aria-live="polite"
+          >
+            Vorm on korrektselt täidetud.
+          </p>
+        </form>
+        <section class="section-padding pt-0">
+  <div class="container-main">
+    <div class="mx-auto w-full max-w-2xl">
+      <div class="card-surface p-6 md:p-8">
+        <div class="mb-6 text-center">
+          <p class="text-sm uppercase tracking-[0.3em] text-muted">GitHub API</p>
+          <h2 class="mt-3 font-heading text-3xl font-black uppercase">
+            Viimased projektid
+          </h2>
+          <p class="mt-3 text-sm leading-6 text-muted">
+            Allpool kuvatakse GitHubi API kaudu valitud kasutaja avalikud repositooriumid.
+          </p>
+        </div>
+
+        <div class="mb-6 flex flex-col gap-4 sm:flex-row">
+          <input
+            id="github-username"
+            type="text"
+            class="input-field sm:flex-1"
+            placeholder="Sisesta GitHubi kasutajanimi"
+            value="octocat"
+            aria-describedby="github-status"
+          />
+          <button id="github-load-btn" class="btn-primary sm:w-auto" type="button">
+            Laadi projektid
+          </button>
+        </div>
+
+        <div
+          id="github-status"
+          class="rounded-xl border border-line bg-panel/60 px-4 py-3 text-sm text-muted"
+          aria-live="polite"
+        >
+          Sisesta GitHubi kasutajanimi ja vajuta “Laadi projektid”.
+        </div>
+
+        <div id="github-repos" class="mt-6 grid gap-4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+      </div>
+    </div>
+  </div>
+</section>
+      </footer>
+  </body>
+</html>
