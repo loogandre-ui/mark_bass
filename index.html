@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <style>
+    html, body {
+      background: #0b0f1a;
+      color: #ffffff;
+    }
+  </style>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem('theme') ?? 'dark';
+    </script>
+    <title>Mark Bass | Avaleht</title>
+    <script type="module" crossorigin src="/mark_bass/assets/main-BItiFLNX.js"></script>
+    <link rel="stylesheet" crossorigin href="/mark_bass/assets/main-C1dAHEzA.css">
+  </head>
+  <body>
+    <main>
+      <div class="min-h-screen bg-surface text-white">
+      <header class="sticky top-0 z-50 border-b border-line bg-surface/80 backdrop-blur-md">
+        <div class="container-main flex items-center justify-between px-6 py-4">
+          <a href="/" class="font-heading text-2xl font-black uppercase tracking-wider text-white">
+            Mark <span class="text-primary">Bass</span>
+          </a>
+
+          <nav class="hidden items-center gap-8 md:flex" aria-label="Menüü">
+            <a href="./" class="text-sm uppercase tracking-[0.2em] text-white">Avaleht</a>
+            <a href="./sets.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Setid</a>
+            <a href="./about.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Meist</a>
+            <a href="./contact.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Kontakt</a>
+          </nav>
+
+          <a href="/sets.html" class="btn-primary hidden md:inline-flex">
+            Vaata sette
+          </a>
+
+          <button
+            id="menu-toggle"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-panel text-white md:hidden"
+            aria-label="Ava menüü"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            type="button"
+          >
+            <span class="sr-only">Ava menüü</span>
+
+            <svg
+              id="menu-icon-open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+
+            <svg
+              id="menu-icon-close"
+              xmlns="http://www.w3.org/2000/svg"
+              class="hidden h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+          <button
+  id="theme-toggle"
+  class="ml-2 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-panel text-white transition hover:bg-white/10"
+  aria-label="Muuda teemat"
+  type="button"
+>
+  <!-- Dark -->
+  <svg
+    id="theme-icon-dark"
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+  </svg>
+
+  <!-- Light -->
+  <svg
+    id="theme-icon-light"
+    xmlns="http://www.w3.org/2000/svg"
+    class="hidden h-5 w-5"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2" />
+    <path d="M12 20v2" />
+    <path d="m4.93 4.93 1.41 1.41" />
+    <path d="m17.66 17.66 1.41 1.41" />
+    <path d="M2 12h2" />
+    <path d="M20 12h2" />
+    <path d="m6.34 17.66-1.41 1.41" />
+    <path d="m19.07 4.93-1.41 1.41" />
+  </svg>
+</button>
+        </div>
+
+        <div
+          id="mobile-menu"
+          class="hidden border-t border-line bg-surface/95 px-6 py-4 md:hidden"
+        >
+          <nav class="flex flex-col gap-4">
+            <a href="/" class="text-sm uppercase tracking-[0.2em] text-white">Avaleht</a>
+            <a href="/sets.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Setid</a>
+            <a href="/about.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Meist</a>
+            <a href="/contact.html" class="text-sm uppercase tracking-[0.2em] text-muted transition hover:text-white">Kontakt</a>
+                   
+          </nav>
+        </div>
+      </header>
+
+      <main>
+          <section id="hero" class="py-20 text-white">
+    <div class="max-w-5xl mx-auto px-4 py-10">
+      <h1 class="text-6xl md:text-4xl font-bold mb-4">
+        Tere tulemast!
+      </h1>
+      <p class="mt-6 max-w-xl text-base leading-7 text-muted md:text-lg">
+  Mark Bass loob muusikalisi rännakuid, kus pinge, groove ja atmosfäär põimuvad ühtseks tervikuks. 
+  Tema setid ei ole lihtsalt lugude kogumikud — need on hoolikalt kujundatud kogemused, mis viivad kuulaja läbi erinevate emotsioonide ja energiatasemete.
+      </p>
+      <a
+        href="#columns"
+        class="inline-block bg-primary hover:opacity-80 text-white font-medium px-6 py-3 rounded transition-opacity"
+      >
+        Loe rohkem
+      </a>
+    </div>
+  </section>
+
+          <section id="columns" class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8">Meie teenused</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <article class="bg-primary/10 border border-primary/20 rounded-lg overflow-hidden text-center">
+          <img src="/mark_bass/assets/hero-1-D7nCPS8y.jpg" alt="Pilt produtsendist"
+            class="w-full aspect-square object-cover" />
+          <div class="p-5">
+            <h3 class="text-lg font-heading font-bold text-primary dark:text-purple-400 mb-2">
+              Helilooming
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              Tegeleme originaalloomingu ning samuti olevasolemate demode produtseerimisega.
+            </p>
+          </div>
+        </article>
+
+        <article class="bg-secondary/10 border border-secondary/20 rounded-lg overflow-hidden text-center">
+          <img src="/mark_bass/assets/hero-2-D3ZNmpYh.jpg" alt="Teenuse kaks illustratsioon"
+            class="w-full aspect-square object-cover" />
+          <div class="p-5">
+            <h4 class="text-lg font-heading font-bold text-secondary dark:text-purple-400 mb-2">
+              Salvestamine ja miksimine 
+            </h4>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              Salvestame ja miksime Teie loomingut.
+            </p>
+          </div>
+        </article>
+
+        <article class="bg-primary/10 border border-primary/20 rounded-lg overflow-hidden text-center">
+          <img src="/mark_bass/assets/hero-3-VHcoD9hv.jpg" alt="Teenuse kolm illustratsioon"
+            class="w-full aspect-square object-cover" />
+          <div class="p-5">
+            <h5 class="text-lg font-heading font-bold text-gray-900 dark:text-white mb-2">
+              Esinemised ja DJ-setid
+            </h5>
+            <p class="text-gray-600 dark:text-gray-300 text-sm">
+              Aitame Teie karjäärile hoo sisse!
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+      </main>
+      <footer>
+        <div class="container-main py-6 text-center">
+          <p class="text-sm text-muted">© 2026 Mark Bass. Kõik õigused kaitstud.</p>
+        </div>
+      </footer>
+    </div>
+    
+  </body>
+</html>
