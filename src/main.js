@@ -1,4 +1,4 @@
-import './style.css'
+import './src/style.css'
 
 const menuToggle = document.querySelector('#menu-toggle')
 const mobileMenu = document.querySelector('#mobile-menu')
